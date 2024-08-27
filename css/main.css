@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    padding: 0
+    padding: 0;
+    background-color: rgb(54, 49, 49);
     
 }
 
@@ -8,7 +9,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
+    padding: 0% 15%;
+    background-color: rgb(54, 49, 49);
 
 
     ul {
@@ -17,11 +19,8 @@ nav {
     }
 
     ul li {
-        margin-right: 20px;
-
-        &:last-child {
-            margin-right: 30px;
-        }
+        margin-right: 40px;
+        
     }
 }
 
@@ -30,5 +29,18 @@ li {
 }
 
 li a {
-    
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover {
+    color: rgb(255,215,0);
+}
+
+
+hr {
+    color: rgb(255,215,0);
+    margin: 0% 7%;
+    margin-right: 9%;
 }
