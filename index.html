@@ -6,29 +6,108 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="./js/main.js"></script>
 </head>
-<body>
+<body id="hjem">
     
     <nav>
-        <li><a href="./index.html">Home</a></li>
+        <li><a href="#hjem">Hjem</a></li>
         <ul>
-            <li><a href="./html/about.html">About</a></li>
-            <li><a href="./html/skills.html">Skills</a></li>
-            <li><a href="./html/education.html">Education</a></li>
-            <li><a href="./html/experience.html">Experience</a></li>
-            <li><a href="./html/contact.html">Contact</a></li>
+            <li><a href="#about-me">Om meg</a></li> <!-- Updated to scroll within the same page -->
+            <li><a href="./html/skills.html">ferdigheter</a></li>
+            <li><a href="./html/education.html">Utdanning</a></li>
+            <li><a href="./html/experience.html">Erfaring</a></li>
+            <li><a href="./html/contact.html">Kontakt</a></li>
         </ul>
     </nav>
-    <hr>
+    <!-- <hr> -->
 
     <div class="intro">
-        <h3>Hello i'm</h3>
-        <h1>Kacper Baran</h1>
+        <div class="text">
+            <h3>Hei, jeg er</h3>
+            <h1>Kacper Baran</h1>
+            <h3 class="description">En IT-elev på Bleiker videregående skole</h3>
+        </div>
+        <div>
+            <img class="photo" src="./img/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg" alt="">
+        </div>
     </div>
 
-    <h3>En IT-elev på Bleiker videregående skole</h3>
+    <p>Jeg er en IT-elev på Bleiker videregående skole med en sterk interesse for teknologi. <br> Jeg har ferdigheter innen programmering, databaser og IT-drift, og jeg er godt til å jobbe med tekniske løsninger.</p>
 
-    <p>Jeg er en IT-elev på Bleiker videregående skole med en sterk interesse for teknologi. <br> Jeg har ferdigheter innen programmering, nettverk og systemadministrasjon, og jeg er godt til å jobbe med tekniske løsninger.</p>
+
+    <div class="cv">
+        <a href="path/to/your-cv.pdf" download class="cv-link">Last ned CV</a>
+    </div>
+
+    <div class="skills-container">
+        <div class="skill-item">
+            <div class="skill-label">HTML</div>
+            <div class="progress-bar">
+                <div class="progress progress-html"></div>
+            </div>
+            <div class="percentage">90%</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">CSS</div>
+            <div class="progress-bar">
+                <div class="progress progress-css"></div>
+            </div>
+            <div class="percentage">80%</div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-label">JavaScript</div>
+            <div class="progress-bar">
+                <div class="progress progress-js"></div>
+            </div>
+            <div class="percentage">60%</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="about-me" id="about-me"> <!-- Add id="om-meg" -->
+        <div class="about-photo">
+            <img src="./img/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg" alt="" class="about-image">
+        </div>
+        <div class="about-text">
+            <h3>Om meg</h3>
+            <p class="about-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis excepturi, molestiae quaerat optio doloremque nihil, suscipit magni possimus rem facilis quis fuga in veniam impedit pariatur quod porro, expedita exercitationem?.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti eveniet et, reiciendis reprehenderit autem ipsa! Rerum alias, sit, odio molestiae expedita ut eum nemo libero qui reprehenderit vero soluta amet?
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="projects-container">
+        <h2>Mine Prosjekter</h2>
+    </div>
     
+
+    <hr class="footer-hr">
+
+<footer>
+    <div class="footer">
+        <div class="footer-section media">
+            <h4>Media</h4>
+            <hr class="media-hr">
+            <ul class="media">
+                <li><a href="https://twitter.com/kacperbaran" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/kacperbaran" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/Kapiib" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+        <div class="footer-section kontakt">
+            <h4>Kontakt meg</h4>
+            <hr class="kontakt-hr">
+            <p>Email: <a href="mailto:barankacper02@gmail.com">barankacper02@gmail.com</a></p>
+            <p class="phone">Phone: <a href="tel:+4746256747">+47 462 56 747</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 Kacper Baran. All rights reserved.</p>
+    </div>
+</footer>
     
     
 </body>

@@ -31,3 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// main.js
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('.intro, .about-me'); // Include other sections as needed
+    const offset = 250; // Adjust this value to control when the section becomes active
+
+    function activateNavLink() {
+        let index = sections.length;
+
+        while (--index && window.scrollY + offset < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove('active'));
+        if (navLinks[index]) {
+            navLinks[index].classList.add('active');
+        }
+    }
+
+    window.addEventListener('scroll', activateNavLink);
+    activateNavLink(); // To activate on load
+});
