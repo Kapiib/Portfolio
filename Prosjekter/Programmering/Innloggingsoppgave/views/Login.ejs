@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <%- include('./partials/head.ejs') %>     
+    </head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Login</h1>
+            <form action="/login" method="POST" onsubmit="changeLogin()">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <button type="submit" id="loginButton">Login</button>
+                <a href="/register">Register</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function changeLogin() {
+            document.getElementById('loginButton').innerText = 'Logging in...';
+        }
+
+        function reset() {
+            document.getElementById('loginButton').innerText = 'Login';
+        }
+
+        window.addEventListener('pageshow', reset);
+    </script>
+</body>
+</html>

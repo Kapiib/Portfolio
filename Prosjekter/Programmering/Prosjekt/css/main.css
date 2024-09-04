@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    margin: 10%;
+    margin-left: 35%;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35%;
+    margin-top: -10%;
+}
+
+#areal{
+
+    font-size: 35px;
+}
+
+.good{
+    color: green;
+}
+
+.bad{
+    color: red;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+}

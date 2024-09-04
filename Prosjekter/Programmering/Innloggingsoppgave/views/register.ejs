@@ -1,0 +1,29 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+    <div class="container">
+        <div class="card">
+            <h1>Register</h1>
+            <form action="/register" method="POST" onsubmit="changeRegister()">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password" required>
+                <button type="submit" id="registerButton">Register</button>
+                <a href="/login">Login</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function changeRegister() {
+            document.getElementById('registerButton').innerText = 'Registering...';
+        }
+
+        function reset() {
+            document.getElementById('registerButton').innerText = 'Register';
+        }
+
+        window.addEventListener('pageshow', reset);
+    </script>
+</body>
+</html>

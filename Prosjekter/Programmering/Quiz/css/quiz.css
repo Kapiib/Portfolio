@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.title{
+    margin-top: 1%;
+    color: white;
+}
+
+#quizContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 10px;
+}
+
+.radio-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#startQuiz {
+    margin-top: 25%;
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.question-container {
+    width: 80%; 
+    margin: 0 auto; 
+    background-color: rgb(245, 245, 245, 90%);
+    border: white;
+    box-shadow: gray -10px -20px 500px 10px;
+    padding: 3%; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1%;
+    margin-top: 0%;
+    animation: fadeInAnimation ease 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+label {
+    display: block;
+    width: 50%;
+    height: 50px;
+    background-color: gray;
+    padding: 10px;
+    margin-left: 25%;
+    margin-top: 2%; 
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 20px;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+input {
+    display: none;
+}
+
+.score{
+    margin-top: 2%;
+    padding-top: 5%;
+    width: 80%;
+    padding-bottom: 30%;
+    align-self: center;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 40px;
+    background-color: rgb(245, 245, 245, 90%);
+    border: white;
+    box-shadow: gray -10px -20px 500px 15px;
+}
+
+.restart{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: absolute;
+    width: 40%;
+    height: 8%;
+    font-size: 30px;
+    margin-top: 30%;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: -2%;
+}
+
+.wrong{
+    background-color: red;
+    transition: background-color 0.3s;
+}
+
+.wrong:hover{
+    background-color: rgb(237, 6, 6);
+}
+
+.correct{
+    background-color: green;
+    transition: background-color 0.3s;
+}
+
+@keyframes fadeInAnimation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.high-score{
+    display: flex;
+    position: absolute;
+        align-self: center;
+    margin-top: 16%;
+    font-size: 65px;
+    display: block;
+    color: black;
+}
+
+#message{
+    position: absolute;
+    color: red;
+    font-size: 25px;
+    margin-top: -5.5%;
+    margin-left: 45%;
+}
+
+.name{
+    display: block;
+}
+
+#nameInput{
+    display: block;
+    font-size: 25px;
+    background-color: black;
+    color: white;
+}
+
+.correct:hover{
+    background-color: rgb(1, 118, 1);
+}
+
+label:hover{
+    background-color: #7e7070;
+    
+}
+
+button {
+    margin-left: 7%;
+    width: 86%;
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(26, 168, 26);
+}
+
