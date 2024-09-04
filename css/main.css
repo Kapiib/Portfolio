@@ -11,8 +11,28 @@ html {
     scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar {
-  width: px;
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: 1.5px solid #7e7e7e;
+    border-radius: 8px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+    border: 2px solid #616161;
+    border-radius: 8px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /* Navbar */
@@ -31,7 +51,7 @@ nav {
     border-left: none;
     border-top: none;
     border-right: none;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 ul {
@@ -135,12 +155,6 @@ hr {
     background-color: #444; 
     border: 2px solid rgb(255, 215, 0); 
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: white;
-    text-align: center;
 }
 
 /* CV */
@@ -307,13 +321,9 @@ hr {
     margin-left: 25%;
 }
 
-.language-text {
-
-}
-
 .language-text p {
     margin-bottom: 20%;
-    margin-top: 10%;
+    margin-top: 5%;
 
     display: inline-block;
     padding: 10px 20px;
@@ -328,6 +338,11 @@ hr {
 
 .language-text p:hover {
     background-color: rgb(255, 215, 0);
+}
+
+.language-link {
+    text-decoration: none;
+    color: white;
 }
 
 /* Prosjekter */
@@ -371,12 +386,13 @@ input[type=text], select {
 
   #info {
     max-width: 350px;
+    min-width: 325px;
+    min-height: 70px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     border: 2px solid rgb(255, 215, 0);
     border-radius: 4px;
-    box-sizing: border-box;
 }
   
   input[type=submit] {
@@ -405,7 +421,6 @@ input[type=text], select {
 }
 
 footer {
-    /* padding: 1% 10%; */
     display: flex;
     flex-direction: column;
 
@@ -420,10 +435,6 @@ footer {
 
 /* Footer kontakt */
 
-.footer-section.kontakt {
-    /* flex: 1; */
-}
-
 .kontakt-hr {
     margin: 0% 40%;
 }
@@ -431,7 +442,6 @@ footer {
 /* Footer media */
 
 .footer-section.media, .footer-section.kontakt {
-    /* flex: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -439,7 +449,6 @@ footer {
 
 .footer-section.media .media {
     margin-top: 3%;
-    /* margin-left: 32%; */
 }
 
 .media-hr {
@@ -460,11 +469,6 @@ footer {
     font-size: 16px;
     color: rgb(255, 215, 0);
     margin-top: 3%;
-    /* margin-left: 22%; */
-}
-
-.footer-section.kontakt .phone {
-    /* margin-left: 25%; */
 }
 
 .footer-section a {
