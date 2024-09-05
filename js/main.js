@@ -75,3 +75,43 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Wait until the DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".sections li");
+    const skillBoxes = document.querySelectorAll(".skill-box");
+
+    // Function to handle the filtering
+    const handleFilter = (filter) => {
+        if (filter === "all") {
+            // Show all skill-boxes
+            skillBoxes.forEach(box => box.classList.add("show"));
+        } else {
+            // Show only the matching skill-boxes
+            skillBoxes.forEach(box => {
+                if (box.classList.contains(filter)) {
+                    box.classList.add("show");
+                } else {
+                    box.classList.remove("show");
+                }
+            });
+        }
+    };
+
+    // Add event listeners to each filter button
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+
+            // Remove active class from all buttons and add to clicked button
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Handle the filtering based on the clicked button
+            handleFilter(filter);
+        });
+    });
+
+    // Show all skill-boxes when the page loads by default
+    handleFilter("all");
+});

@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/main.css">
-    <script src="../js/main.js"></script>
+    <script src="/js/main.js"></script>
 </head>
 <body>
 
@@ -13,12 +13,57 @@
         <ul>
             <li><a href="../index.html#about-me">Om meg</a></li>
             <li><a href="/html/skills.html">Ferdigheter</a></li>
-            <li><a href="/html/experience.html">Erfaring</a></li>
+            <li><a href="/html/experience.html">Prosjekter</a></li>
             <li><a href="/html/contact.html">Kontakt</a></li>
         </ul>
     </nav>
 
-    
-    
+    <div class="projects-container">
+        <h2>Mine Prosjekter</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>Prosjekt 1</h3>
+                <p>Dette er en pokedex ved bruk av API. Den involverer bruk av HTML, CSS, JavaScript og API.</p>
+                <a href="/Prosjekter/Programmering/APIprosjekt/Del3/index.html" class="project-link">Les mer</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Prosjekt 2</h3>
+                <p>Dette er en bilde for verdens psykisk helsedag 2023. Den fokuserer på både design og følelsene den skal gi andre.</p>
+                <img src="/Prosjekter/Design/Svar og Hvit opggave/Bilder-web-facebook/Bilder-web-facebook-1.png" alt="" class="facebook-photo" id="project-img">
+            </div>
+
+            <div class="project-item">
+                <h3>Prosjekt 3</h3>
+                <p>Dette er en app om ki laget i adobeXD. Det handler om planlegging og kreativitet.</p>
+                <a href="https://xd.adobe.com/view/0ab8d026-04ff-451d-af29-1ae022900bd6-5feb/?assignmentId=2f4f75e7-ed72-4644-a59c-c3ec5359893d&classId=6c27bc67-2dac-48b4-9b73-1b9b6e034cfe&submissionId=1d66f1eb-ef8f-2197-3568-5ee371d79715" class="project-link" target="_blank">Les mer</a>
+            </div>
+
+
+            <div class="project-item">
+                <h3>Prosjekt 4</h3>
+                <p>Dette er en register og login oppgave. Det handler om lagring av passord og mail i local sotrage, som kan bli bruk til innlogging.</p>
+                <a href="/Prosjekter/Programmering/Mail and Password/Main.html" class="project-link">Les mer</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Prosjekt 5</h3>
+                <p>Dette er en quiz prosjekt. Den handler om sjekking hvis svar er rigktig eller ikke ved bruk av javascript.</p>
+                <a href="/Prosjekter/Programmering/Quiz/index.html" class="project-link">Les mer</a>
+            </div>
+            
+            <div class="project-item">
+                <h3>Prosjekt 6</h3>
+                <p>Dette er mer avansert innloggings oppgave. Det bruker ejs, javascript, css og mongoDB.</p>
+                <a href="/Prosjekter/Programmering/Innloggingsoppgave/app.js" class="project-link">Les mer</a>
+            </div>
+        </div>
+            
+        <div id="imgModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="imgModalContent">
+            <div id="caption"></div>
+        </div>
+
 </body>
 </html>
