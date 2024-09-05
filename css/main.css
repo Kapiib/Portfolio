@@ -54,6 +54,72 @@ nav {
     border-radius: 15px;
 }
 
+.sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sections ul {
+    display: flex;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal-content {
+    max-width: auto;
+    max-height: 80%;
+    display: block;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-iframe-container {
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid rgb(255, 215, 0); /* Match with your project-item border color */
+    border-radius: 10px;
+}
+
+.project-iframe {
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    border: none;
+}
+
 ul {
     display: flex;
     align-items: center;
@@ -155,6 +221,11 @@ hr {
     background-color: #444; 
     border: 2px solid rgb(255, 215, 0); 
     border-radius: 10px;
+}
+
+.facebook-photo {
+    width: 440px;
+    height: auto;
 }
 
 /* CV */
@@ -260,6 +331,25 @@ hr {
 }
 
 .ferdigheter-link:hover {
+    background-color: rgb(255, 215, 0);
+}
+
+.projects-all {
+    margin-top: 3%;
+}
+
+.projects-all-link {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+    border: solid 2px rgb(255, 215, 0);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.projects-all-link:hover {
     background-color: rgb(255, 215, 0);
 }
 
@@ -376,6 +466,11 @@ hr {
     width: 30%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item-api:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .project-item:hover {
@@ -595,5 +690,23 @@ footer {
 
     .cv {
         margin-top: -9%;
+    }
+
+    .ferdigheter {
+        margin: 0% 25%;
+        margin-top: -4%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (max-width: 1240px) {
+    body {
+        background-color: white;
+    }
+}
+
+@media (max-width: 660px){
+    body {
+        background-color: red;
     }
 }

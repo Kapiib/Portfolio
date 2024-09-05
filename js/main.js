@@ -52,3 +52,26 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', activateNavLink);
     activateNavLink(); // To activate on load
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const img = document.getElementById("project-img");
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("imgModalContent");
+    const close = document.getElementsByClassName("close")[0];
+
+    img.onclick = function() {
+        modal.style.display = "flex"; // Use flex to center the modal content
+        modalImg.src = this.src;
+    }
+
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal if the user clicks anywhere outside the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});

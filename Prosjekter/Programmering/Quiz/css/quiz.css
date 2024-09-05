@@ -171,3 +171,9 @@ button:hover {
     background-color: rgb(26, 168, 26);
 }
 
+.index a {
+    display: flex;
+    margin-left: 10%;
+    color: white;
+
+}
