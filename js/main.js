@@ -1,42 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('nav a');
+    
+    function setActiveLink() {
+        const currentPath = window.location.pathname;
 
-    // Get the current page URL
-    const currentPath = window.location.pathname;
+        links.forEach(link => {
+            const linkHref = link.getAttribute('href');
 
-    // Loop through each link and check if it matches the current URL
-    links.forEach(link => {
-        if (link.getAttribute('href').endsWith(currentPath)) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
+            // Handle relative paths and anchors
+            const linkPath = new URL(linkHref, window.location.href).pathname;
+            const isActive = linkPath === currentPath || (currentPath.startsWith(linkPath) && linkPath !== '');
 
-        // Add a click event listener to each link
-        link.addEventListener('click', function(event) {
-            // Prevent the default link navigation
-            event.preventDefault();
-
-            // Remove the 'active' class from all links
-            links.forEach(link => link.classList.remove('active'));
-
-            // Add the 'active' class to the clicked link
-            this.classList.add('active');
-
-            // Store the currently active link in localStorage
-            localStorage.setItem('activeLink', this.getAttribute('href'));
-
-            // Navigate to the link after the active class has been applied
-            window.location.href = this.getAttribute('href');
+            if (isActive) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
         });
-    });
+    }
+
+    // Call setActiveLink initially when the page is loaded
+    setActiveLink();
+
+    // Also apply active class after each navigation (browser back/forward)
+    window.addEventListener('popstate', setActiveLink);
 });
 
-// main.js
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('.intro, .about-me'); // Include other sections as needed
-    const offset = 250; // Adjust this value to control when the section becomes active
+    const sections = document.querySelectorAll('.intro, .about-me'); 
+    const offset = 250; 
 
     function activateNavLink() {
         let index = sections.length;
@@ -50,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', activateNavLink);
-    activateNavLink(); // To activate on load
+    activateNavLink();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -60,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const close = document.getElementsByClassName("close")[0];
 
     img.onclick = function() {
-        modal.style.display = "flex"; // Use flex to center the modal content
+        modal.style.display = "flex"; 
         modalImg.src = this.src;
     }
 
@@ -68,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = "none";
     }
 
-    // Close the modal if the user clicks anywhere outside the modal content
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -76,18 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Wait until the DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll(".sections li");
     const skillBoxes = document.querySelectorAll(".skill-box");
 
-    // Function to handle the filtering
     const handleFilter = (filter) => {
         if (filter === "all") {
-            // Show all skill-boxes
             skillBoxes.forEach(box => box.classList.add("show"));
         } else {
-            // Show only the matching skill-boxes
             skillBoxes.forEach(box => {
                 if (box.classList.contains(filter)) {
                     box.classList.add("show");
@@ -98,20 +86,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Add event listeners to each filter button
     filterButtons.forEach(button => {
         button.addEventListener("click", () => {
             const filter = button.getAttribute("data-filter");
 
-            // Remove active class from all buttons and add to clicked button
             filterButtons.forEach(btn => btn.classList.remove("active"));
             button.classList.add("active");
 
-            // Handle the filtering based on the clicked button
             handleFilter(filter);
         });
     });
 
-    // Show all skill-boxes when the page loads by default
     handleFilter("all");
 });
