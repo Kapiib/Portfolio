@@ -213,9 +213,9 @@ hr {
 /* Bilde */
 
 .photo {
-    width: 40em;
-    margin-left: 15%;
+    width: 25em;
     height: auto;
+    margin-left: -5%;
     background-color: var(--secondary-bg-color); 
     border: 2px solid var(--primary-color); 
     border-radius: 10px;
@@ -347,6 +347,7 @@ hr {
 .about-photo {
     flex: 1; 
     padding-right: 5%;
+    margin-top: 6%;
 }
 
 .about-image {
@@ -597,6 +598,14 @@ hr {
 
 /* Form */
 
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: -5%;
+}
+
 .form-div {
     display: flex;
     flex-direction: column;
@@ -746,8 +755,8 @@ footer {
 
 @media screen and (max-width: 2000px) {
     #info {
-        max-width: 355px;
-        min-width: 355px;
+        max-width: 800px;
+        min-width: 500px;
     }
 
     .cv {
@@ -758,6 +767,14 @@ footer {
         margin: 0% 25%;
         margin-top: -4%;
         margin-bottom: 2%;
+    }
+
+    .form-div {
+        padding: 0 0%; 
+        margin: 0 auto; 
+        width: 40%; 
+        margin-top: 8%;
+        margin-bottom: 5%;
     }
 }
 
@@ -770,17 +787,19 @@ footer {
     }
 
     .cv {
-        margin-top: 3%;
+        padding-bottom: 5%;
+        margin-top: -11%;
     }
 
     .ferdigheter {
-        margin: 0% 33%; 
+        margin: 0% 31%; 
         margin-top: -4%;
         margin-bottom: 2%;
     }
     
     .about-image {
-        margin-left: 9em;
+        margin-left: 10em;
+        margin-bottom: 5%;
     }
 
     .about-me {
@@ -814,7 +833,13 @@ footer {
     }
 
     .modal-content {
-        max-height: 50%;
+        max-height: 70%;
+    }
+
+    .form-div {
+        margin-left: 25%;
+        width: 20%;
+
     }
 
 }
@@ -823,7 +848,6 @@ footer {
 
     nav {
         border-bottom: 3px solid var(--primary-color);
-        width: 100%; 
         padding: 0 5%; 
     }
 
@@ -869,6 +893,7 @@ footer {
 
     .cv {
         margin-left: 43%;
+        margin-top: 3%;
     }
 
     .ferdigheter {
@@ -894,7 +919,7 @@ footer {
     }
 
     .projects-container {
-        margin-left: 10%;
+        margin-left: 5%;
     }
 
     .footer {
@@ -903,7 +928,7 @@ footer {
 
     .about-text {
         align-items: center; 
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     .language {
@@ -913,6 +938,7 @@ footer {
 
     .projects-all {
         margin-top: 5%;
+        margin-bottom: 8%;
     }
 
     .project-item {
@@ -924,10 +950,33 @@ footer {
     .form-div {
         padding: 0 5%; 
         margin: 0 auto; 
-        width: 90%; 
+        width: 70%; 
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 
     .modal-content {
         max-height: 50%; 
     }
+
+    .sections ul li {
+        margin-right: 0%;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .footer-section h4 {
+        margin-right: -25%;
+    }
+
+    .footer-section a {
+        margin-left: 40%;
+    }
+
+    .contact {
+        margin-bottom: 5%;
+    }
+
 }
